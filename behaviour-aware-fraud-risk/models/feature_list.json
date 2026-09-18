@@ -1,0 +1,11 @@
+[
+  "amount_ratio",
+  "amount_zscore",
+  "is_unusual_hour",
+  "is_new_merchant",
+  "is_new_beneficiary",
+  "transaction_velocity",
+  "days_since_last_transaction",
+  "hour",
+  "amount"
+]

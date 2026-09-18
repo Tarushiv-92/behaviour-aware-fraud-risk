@@ -1,0 +1,101 @@
+{
+  "local_examples": [
+    {
+      "risk_score": 0.9987,
+      "risk_band": "HIGH",
+      "reason_codes": [
+        "Amount much higher than this customer's normal spend",
+        "Amount is a statistical outlier vs the customer's history",
+        "Unusually high number of transactions in a short window"
+      ],
+      "contributions": {
+        "amount_ratio": 0.2098,
+        "amount_zscore": 0.118,
+        "transaction_velocity": 0.0573
+      },
+      "transaction_id": "T0006440",
+      "customer_id": "C0027",
+      "is_fraud": 1
+    },
+    {
+      "risk_score": 0.9986,
+      "risk_band": "HIGH",
+      "reason_codes": [
+        "Amount much higher than this customer's normal spend",
+        "Amount is a statistical outlier vs the customer's history",
+        "Transaction hour is atypical for this customer"
+      ],
+      "contributions": {
+        "amount_ratio": 0.2093,
+        "amount_zscore": 0.131,
+        "hour": 0.0416
+      },
+      "transaction_id": "T0006415",
+      "customer_id": "C0146",
+      "is_fraud": 1
+    },
+    {
+      "risk_score": 0.9984,
+      "risk_band": "HIGH",
+      "reason_codes": [
+        "Amount much higher than this customer's normal spend",
+        "Amount is a statistical outlier vs the customer's history",
+        "Unusually high number of transactions in a short window"
+      ],
+      "contributions": {
+        "amount_ratio": 0.2082,
+        "amount_zscore": 0.1256,
+        "transaction_velocity": 0.0547
+      },
+      "transaction_id": "T0006330",
+      "customer_id": "C0047",
+      "is_fraud": 1
+    },
+    {
+      "risk_score": 0.9984,
+      "risk_band": "HIGH",
+      "reason_codes": [
+        "Amount much higher than this customer's normal spend",
+        "Amount is a statistical outlier vs the customer's history",
+        "Unusually high number of transactions in a short window"
+      ],
+      "contributions": {
+        "amount_ratio": 0.2097,
+        "amount_zscore": 0.1179,
+        "transaction_velocity": 0.0573
+      },
+      "transaction_id": "T0006405",
+      "customer_id": "C0051",
+      "is_fraud": 1
+    },
+    {
+      "risk_score": 0.9981,
+      "risk_band": "HIGH",
+      "reason_codes": [
+        "Amount much higher than this customer's normal spend",
+        "Amount is a statistical outlier vs the customer's history",
+        "Transaction hour is atypical for this customer"
+      ],
+      "contributions": {
+        "amount_ratio": 0.1813,
+        "amount_zscore": 0.1365,
+        "hour": 0.093
+      },
+      "transaction_id": "T0006400",
+      "customer_id": "C0002",
+      "is_fraud": 1
+    }
+  ],
+  "global_mean_abs_shap": {
+    "amount_ratio": 0.185973,
+    "amount_zscore": 0.109868,
+    "transaction_velocity": 0.046179,
+    "amount": 0.040946,
+    "is_new_beneficiary": 0.034295,
+    "hour": 0.032715,
+    "days_since_last_transaction": 0.0266,
+    "is_new_merchant": 0.020172,
+    "is_unusual_hour": 0.016422
+  },
+  "explainer": "TreeExplainer"
+}

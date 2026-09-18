@@ -1,0 +1,9 @@
+{
+  "threshold": 0.8,
+  "risk_bands": {
+    "LOW": "<0.40",
+    "MEDIUM": "0.40-0.70",
+    "HIGH": ">=0.70"
+  },
+  "production_model": "random_forest_balanced"
+}

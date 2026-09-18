@@ -1,0 +1,96 @@
+{
+  "note": "Do not headline accuracy. Fraud is rare; use precision, recall, F1, PR-AUC.",
+  "data_source": "/Users/abhishek5414/GLA/behaviour-aware-fraud-risk/data/processed/features.csv",
+  "person2_status": "blocked \u2014 training on dummy Person-2 contract features",
+  "split": "time-based 80/20 (earlier txns train, later txns test)",
+  "fraud_rate_overall": 0.01997522452771756,
+  "fraud_rate_train": 0.02013162988772745,
+  "fraud_rate_test": 0.01934984520123839,
+  "n_train": 5166,
+  "n_test": 1292,
+  "features": [
+    "amount_ratio",
+    "amount_zscore",
+    "is_unusual_hour",
+    "is_new_merchant",
+    "is_new_beneficiary",
+    "transaction_velocity",
+    "days_since_last_transaction",
+    "hour",
+    "amount"
+  ],
+  "threshold": 0.8,
+  "threshold_rule": "max F1 on train probabilities",
+  "production_model": "random_forest_balanced",
+  "logistic_regression": {
+    "precision": 0.8571428571428571,
+    "recall": 0.96,
+    "f1": 0.9056603773584906,
+    "pr_auc": 0.9894117647058824,
+    "accuracy": 0.9961300309597523,
+    "confusion_matrix": [
+      [
+        1263,
+        4
+      ],
+      [
+        1,
+        24
+      ]
+    ],
+    "threshold": 0.8,
+    "n_positive": 25,
+    "n_rows": 1292
+  },
+  "random_forest": {
+    "precision": 1.0,
+    "recall": 0.92,
+    "f1": 0.9583333333333334,
+    "pr_auc": 0.9957142857142858,
+    "accuracy": 0.9984520123839009,
+    "confusion_matrix": [
+      [
+        1267,
+        0
+      ],
+      [
+        2,
+        23
+      ]
+    ],
+    "threshold": 0.8,
+    "n_positive": 25,
+    "n_rows": 1292
+  },
+  "random_forest_smote": {
+    "precision": 1.0,
+    "recall": 0.8,
+    "f1": 0.8888888888888888,
+    "pr_auc": 0.9602599933290665,
+    "accuracy": 0.9961300309597523,
+    "confusion_matrix": [
+      [
+        1267,
+        0
+      ],
+      [
+        5,
+        20
+      ]
+    ],
+    "threshold": 0.8,
+    "n_positive": 25,
+    "n_rows": 1292
+  },
+  "rf_feature_importance": {
+    "amount_ratio": 0.4181537272352565,
+    "amount_zscore": 0.3263756955665683,
+    "is_unusual_hour": 0.03296526395414487,
+    "is_new_merchant": 0.014521331779200864,
+    "is_new_beneficiary": 0.03801776478598813,
+    "transaction_velocity": 0.0394307243297356,
+    "days_since_last_transaction": 0.04549845284428351,
+    "hour": 0.05334600189279748,
+    "amount": 0.03169103761202481
+  }
+}
